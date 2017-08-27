@@ -1,0 +1,59 @@
+{
+  "private": true,
+  "name": "asso-rei.fr",
+  "description": "association sportive",
+  "author": "Mehdi Lahlou <mehdi.lahlou@free.fr>",
+  "homepage": "https://www.asso-rei.fr/",
+  "repository": "https://github.com/medfreeman/asso-rei.fr.git",
+  "scripts": {
+    "#<git hooks>": "handled by husky",
+    "precommit": "lint-staged",
+    "#</git hooks>": "handled by husky",
+    "lint:js": "eslint --ignore-path .gitignore --fix .",
+    "lint:css": "stylelint \"assets/css/*.css\" --fix",
+    "lint": "npm-run-all --parallel lint:*",
+    "test": "yarn run lint",
+    "dev": "nuxt"
+  },
+  "devDependencies": {
+    "eslint": "^4.5.0",
+    "eslint-plugin-vue": "beta",
+    "git-exec-and-restage": "^1.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.4",
+    "npm-run-all": "^4.0.2",
+    "nuxt": "^1.0.0-rc6",
+    "prettier": "^1.5.3",
+    "stylelint": "^8.0.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "git-exec-and-restage prettier --write --parser=babylon --"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "eslint:recommended",
+      "plugin:vue/recommended"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-css-modules"
+    ],
+    "rules": {
+      "declaration-empty-line-before": null,
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "context",
+            "import-normalize"
+          ]
+        }
+      ]
+    }
+  }
+}
