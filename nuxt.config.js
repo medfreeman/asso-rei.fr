@@ -44,5 +44,5 @@ module.exports = {
     postcss: [require("postcss-cssnext")(), require("postcss-reporter")()]
   },
   css: ["~/assets/style/app.styl", "vue-flex/dist/vue-flex.css"],
-  plugins: ["~/plugins/vuetify.js", "~plugins/flex"]
+  plugins: ["~/plugins/vuetify", "~plugins/flex"]
 };
