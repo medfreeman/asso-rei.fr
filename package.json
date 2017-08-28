@@ -29,15 +29,14 @@
     "npm-run-all": "^4.0.2",
     "nuxt": "^1.0.0-rc6",
     "postcss-cssnext": "^3.0.2",
-    "postcss-import": "^10.0.0",
-    "postcss-normalize": "^4.0.0",
-    "postcss-plugin-context": "^2.0.0",
     "postcss-reporter": "^5.0.0",
     "prettier": "^1.5.3",
     "stylelint": "^8.0.0",
     "stylelint-config-standard": "^17.0.0",
     "stylelint-processor-html": "^1.0.0",
     "stylelint-webpack-plugin": "^0.9.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
     "vue-flex": "^1.0.9",
     "vuetify": "^0.15.0-beta.3"
   },
@@ -69,16 +68,7 @@
     ],
     "rules": {
       "no-empty-source": null,
-      "declaration-empty-line-before": null,
-      "at-rule-no-unknown": [
-        true,
-        {
-          "ignoreAtRules": [
-            "context",
-            "import-normalize"
-          ]
-        }
-      ]
+      "declaration-empty-line-before": null
     }
   }
 }

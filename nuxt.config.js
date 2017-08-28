@@ -41,21 +41,8 @@ module.exports = {
         files: ["src/**/*.css", "src/**/*.vue"]
       })
     ],
-    postcss: [
-      require("postcss-import")(),
-      require("postcss-plugin-context")({
-        global: require("postcss-normalize")({
-          browserslist: "last 3 versions"
-        })
-      }),
-      require("postcss-cssnext")(),
-      require("postcss-reporter")()
-    ]
+    postcss: [require("postcss-cssnext")(), require("postcss-reporter")()]
   },
-  css: [
-    "~/assets/css/main.global.css",
-    "vuetify/dist/vuetify.min.css",
-    "vue-flex/dist/vue-flex.css"
-  ],
+  css: ["~/assets/style/app.styl", "vue-flex/dist/vue-flex.css"],
   plugins: ["~/plugins/vuetify.js", "~plugins/flex"]
 };
