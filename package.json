@@ -13,7 +13,10 @@
     "lint:css": "stylelint \"src/**/*.css\" \"**/*.vue\"",
     "lint": "npm-run-all --parallel lint:*",
     "test": "yarn run lint",
-    "dev": "nuxt"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "devDependencies": {
     "eslint": "^4.5.0",
