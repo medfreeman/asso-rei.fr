@@ -23,6 +23,10 @@
     "lint-staged": "^4.0.4",
     "npm-run-all": "^4.0.2",
     "nuxt": "^1.0.0-rc6",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^10.0.0",
+    "postcss-normalize": "^4.0.0",
+    "postcss-plugin-context": "^2.0.0",
     "prettier": "^1.5.3",
     "stylelint": "^8.0.0",
     "vue-flex": "^1.0.9"
