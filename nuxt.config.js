@@ -18,7 +18,7 @@ module.exports = {
     },
     plugins: [
       new StyleLintPlugin({
-        files: "**/*.css"
+        files: ["**/*.css", "**/*.vue"]
       })
     ],
     postcss: [

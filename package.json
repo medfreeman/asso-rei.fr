@@ -9,8 +9,8 @@
     "#<git hooks>": "handled by husky",
     "precommit": "lint-staged",
     "#</git hooks>": "handled by husky",
-    "lint:js": "eslint --ignore-path .gitignore --fix .",
-    "lint:css": "stylelint \"**/*.css\" --fix",
+    "lint:js": "eslint --ignore-path .gitignore --fix \"**/*.js\" \"**/*.vue\"",
+    "lint:css": "stylelint \"**/*.css\" \"**/*.vue\"",
     "lint": "npm-run-all --parallel lint:*",
     "test": "yarn run lint",
     "dev": "nuxt"
@@ -33,6 +33,7 @@
     "prettier": "^1.5.3",
     "stylelint": "^8.0.0",
     "stylelint-config-standard": "^17.0.0",
+    "stylelint-processor-html": "^1.0.0",
     "stylelint-webpack-plugin": "^0.9.0",
     "vue-flex": "^1.0.9"
   },
@@ -56,10 +57,14 @@
     }
   },
   "stylelint": {
+    "processors": [
+      "stylelint-processor-html"
+    ],
     "extends": [
       "stylelint-config-standard"
     ],
     "rules": {
+      "no-empty-source": null,
       "declaration-empty-line-before": null,
       "at-rule-no-unknown": [
         true,
