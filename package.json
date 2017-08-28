@@ -10,13 +10,15 @@
     "precommit": "lint-staged",
     "#</git hooks>": "handled by husky",
     "lint:js": "eslint --ignore-path .gitignore --fix .",
-    "lint:css": "stylelint \"assets/css/*.css\" --fix",
+    "lint:css": "stylelint \"**/*.css\" --fix",
     "lint": "npm-run-all --parallel lint:*",
     "test": "yarn run lint",
     "dev": "nuxt"
   },
   "devDependencies": {
     "eslint": "^4.5.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.9.0",
     "eslint-plugin-vue": "beta",
     "git-exec-and-restage": "^1.0.1",
     "husky": "^0.14.3",
@@ -27,13 +29,19 @@
     "postcss-import": "^10.0.0",
     "postcss-normalize": "^4.0.0",
     "postcss-plugin-context": "^2.0.0",
+    "postcss-reporter": "^5.0.0",
     "prettier": "^1.5.3",
     "stylelint": "^8.0.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-webpack-plugin": "^0.9.0",
     "vue-flex": "^1.0.9"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "*.js": [
       "git-exec-and-restage prettier --write --parser=babylon --"
+    ],
+    "*.css": [
+      "git-exec-and-restage prettier --write --"
     ]
   },
   "eslintConfig": {
@@ -41,12 +49,15 @@
     "extends": [
       "eslint:recommended",
       "plugin:vue/recommended"
-    ]
+    ],
+    "env": {
+      "browser": true,
+      "node": true
+    }
   },
   "stylelint": {
     "extends": [
-      "stylelint-config-standard",
-      "stylelint-config-css-modules"
+      "stylelint-config-standard"
     ],
     "rules": {
       "declaration-empty-line-before": null,
