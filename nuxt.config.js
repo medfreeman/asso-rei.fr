@@ -2,6 +2,15 @@ var StyleLintPlugin = require("stylelint-webpack-plugin");
 
 module.exports = {
   srcDir: "src/",
+  head: {
+    link: [
+      {
+        rel: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
+      }
+    ]
+  },
   build: {
     extractCSS: true,
     vendor: ["vuetify", "vue-flex"],
