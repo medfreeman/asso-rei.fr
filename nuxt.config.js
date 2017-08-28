@@ -3,6 +3,7 @@ var StyleLintPlugin = require("stylelint-webpack-plugin");
 module.exports = {
   srcDir: "src/",
   build: {
+    extractCSS: true,
     vendor: ["vuetify", "vue-flex"],
     extend(config, { isClient }) {
       if (isClient) {
