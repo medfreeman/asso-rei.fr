@@ -3,7 +3,7 @@ var StyleLintPlugin = require("stylelint-webpack-plugin");
 module.exports = {
   srcDir: "src/",
   build: {
-    vendor: ["vue-flex"],
+    vendor: ["vuetify", "vue-flex"],
     extend(config, { isClient }) {
       if (isClient) {
         config.module.rules.push({
@@ -33,6 +33,10 @@ module.exports = {
       require("postcss-reporter")()
     ]
   },
-  css: ["~/assets/css/main.global.css", "vue-flex/dist/vue-flex.css"],
-  plugins: ["~plugins/flex"]
+  css: [
+    "~/assets/css/main.global.css",
+    "vuetify/dist/vuetify.min.css",
+    "vue-flex/dist/vue-flex.css"
+  ],
+  plugins: ["~/plugins/vuetify.js", "~plugins/flex"]
 };

@@ -35,7 +35,8 @@
     "stylelint-config-standard": "^17.0.0",
     "stylelint-processor-html": "^1.0.0",
     "stylelint-webpack-plugin": "^0.9.0",
-    "vue-flex": "^1.0.9"
+    "vue-flex": "^1.0.9",
+    "vuetify": "^0.15.0-beta.3"
   },
   "lint-staged": {
     "*.js": [
