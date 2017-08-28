@@ -9,8 +9,8 @@
     "#<git hooks>": "handled by husky",
     "precommit": "lint-staged",
     "#</git hooks>": "handled by husky",
-    "lint:js": "eslint --ignore-path .gitignore --fix \"**/*.js\" \"**/*.vue\"",
-    "lint:css": "stylelint \"**/*.css\" \"**/*.vue\"",
+    "lint:js": "eslint --ignore-path .gitignore --fix \"src/**/*.js\" \"src/**/*.vue\"",
+    "lint:css": "stylelint \"src/**/*.css\" \"**/*.vue\"",
     "lint": "npm-run-all --parallel lint:*",
     "test": "yarn run lint",
     "dev": "nuxt"

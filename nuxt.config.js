@@ -1,6 +1,7 @@
 var StyleLintPlugin = require("stylelint-webpack-plugin");
 
 module.exports = {
+  srcDir: "src/",
   build: {
     vendor: ["vue-flex"],
     extend(config, { isClient }) {
@@ -18,7 +19,7 @@ module.exports = {
     },
     plugins: [
       new StyleLintPlugin({
-        files: ["**/*.css", "**/*.vue"]
+        files: ["src/**/*.css", "src/**/*.vue"]
       })
     ],
     postcss: [
