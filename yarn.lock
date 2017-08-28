@@ -6823,6 +6823,10 @@ vue-eslint-parser@2.0.0-beta.7:
     espree "^3.3.2"
     lodash "^4.17.4"
 
+vue-flex@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/vue-flex/-/vue-flex-1.0.9.tgz#4605bd85c9fd9516db132f05b76e2c4d0ab9dc7f"
+
 vue-hot-reload-api@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.1.0.tgz#9ca58a6e0df9078554ce1708688b6578754d86de"

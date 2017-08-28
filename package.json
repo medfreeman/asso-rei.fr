@@ -26,7 +26,8 @@
     "npm-run-all": "^4.0.2",
     "nuxt": "^1.0.0-rc6",
     "prettier": "^1.5.3",
-    "stylelint": "^8.0.0"
+    "stylelint": "^8.0.0",
+    "vue-flex": "^1.0.9"
   },
   "lint-staged": {
     "*.{js,jsx}": [
