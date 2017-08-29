@@ -35,19 +35,12 @@
 </template>
 
 <script>
-import pkg from "~~/package.json"
 export default {
-  data () {
-    return {
-      title: pkg.name
-    }
-  },
   head () {
     return {
-      title: this.title,
-      titleTemplate: `%s | ${pkg.description}`,
+      title: "Activités",
       meta: [
-        { hid: "description", name: "description", content: pkg.description }
+        { hid: "description", name: "description", content: "Description des activités de l'association" }
       ]
     }
   }
