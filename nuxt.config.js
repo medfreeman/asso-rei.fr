@@ -44,5 +44,10 @@ module.exports = {
     postcss: [require("postcss-cssnext")(), require("postcss-reporter")()]
   },
   css: ["~/assets/style/app.styl", "vue-flex/dist/vue-flex.css"],
-  plugins: ["~/plugins/vuetify", "~plugins/flex", "~plugins/vuex-scroll"]
+  plugins: [
+    "~/plugins/vuetify",
+    "~plugins/flex",
+    "~plugins/vuex-scroll",
+    "~plugins/vuex-pageScroll"
+  ]
 };
