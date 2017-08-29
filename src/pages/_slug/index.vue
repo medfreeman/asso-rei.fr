@@ -8,18 +8,15 @@
 </template>
 
 <script>
-import pkg from "~~/package.json";
-
 import {createClient} from "~/plugins/contentful";
 const client = createClient();
 
 export default {
-  layout: "landing",
-  async asyncData({ env, error }) {
+  async asyncData({ env, params, error }) {
     try {
       const { items } = await client.getEntries({
         "content_type": env.CTF_PAGE_TYPE_ID,
-        "fields.slug": "accueil"
+        "fields.slug": params.slug
       });
       return {
         page: items[0].fields
@@ -30,8 +27,7 @@ export default {
   },
   head () {
     return {
-      title: pkg.name,
-      titleTemplate: `%s | ${pkg.description}`,
+      title: this.page.title,
       meta: [
         { hid: "description", name: "description", content: this.page.description }
       ]
