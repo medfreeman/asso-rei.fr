@@ -3,15 +3,20 @@
     <header>
       <h1>{{ page.title }}</h1>
     </header>
-    {{ page.body }}
+    <vue-markdown>{{ page.body }}</vue-markdown>
   </article>
 </template>
 
 <script>
+import VueMarkdown from "vue-markdown";
+
 import {createClient} from "~/plugins/contentful";
 const client = createClient();
 
 export default {
+  components: {
+    VueMarkdown
+  },
   async asyncData({ env, params, error }) {
     try {
       const { items } = await client.getEntries({

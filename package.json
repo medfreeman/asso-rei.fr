@@ -39,6 +39,7 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
     "vue-flex": "^1.0.9",
+    "vue-markdown": "^2.1.3",
     "vuetify": "^0.15.0-beta.3",
     "vuex-scroll": "^0.0.5"
   },
