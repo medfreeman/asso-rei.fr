@@ -52,6 +52,7 @@ module.exports = {
     "~/plugins/vuex-scroll",
     "~/plugins/vuex-pageScroll"
   ],
+  modules: ["@nuxtjs/font-awesome"],
   env: {
     CTF_SPACE_ID: config.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,

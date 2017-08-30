@@ -19,6 +19,7 @@
     "generate": "nuxt generate"
   },
   "devDependencies": {
+    "@nuxtjs/font-awesome": "^1.0.2",
     "contentful": "^4.6.1",
     "eslint": "^4.5.0",
     "eslint-friendly-formatter": "^3.0.0",
