@@ -1,8 +1,9 @@
 <template>
   <v-toolbar dark fixed :style="{opacity: toolbarOpacity}" :class="$style.toolbar">
-    <v-spacer></v-spacer>
-    <logo :logoClass="$style.logo"/>
-    <v-spacer></v-spacer>
+    <flex3c-center>
+      <navigation slot="left"/>
+      <logo :logoClass="$style.logo"/>
+    </flex3c-center>
   </v-toolbar>
 </template>
 
@@ -19,10 +20,12 @@
 <script>
 import { mapState } from "vuex";
 
+import flex3cCenter from "~/components/flex-3c-center.vue";
+import navigation from "~/components/navigation.vue";
 import logo from "~/components/logo.vue";
 
 export default {
-  components: {logo},
+  components: {flex3cCenter, navigation, logo},
   props: {
     animated: {
       type: Boolean,
