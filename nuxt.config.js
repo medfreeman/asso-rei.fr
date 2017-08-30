@@ -56,6 +56,7 @@ module.exports = {
     CTF_SPACE_ID: config.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
     CTF_PERSON_ID: config.CTF_PERSON_ID,
-    CTF_PAGE_TYPE_ID: config.CTF_PAGE_TYPE_ID
+    CTF_PAGE_TYPE_ID: config.CTF_PAGE_TYPE_ID,
+    CTF_MENU_TYPE_ID: config.CTF_MENU_TYPE_ID
   }
 };
