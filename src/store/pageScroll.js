@@ -3,7 +3,7 @@ export const state = () => ({
 });
 
 export const mutations = {
-  update(state, { progress }) {
+  update(state, progress) {
     state.progress = progress;
   }
 };
