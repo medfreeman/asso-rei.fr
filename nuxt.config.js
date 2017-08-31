@@ -21,6 +21,10 @@ module.exports = {
       }
     ]
   },
+  manifest: {
+    name: pkg.name,
+    lang: "fr"
+  },
   build: {
     extractCSS: true,
     vendor: ["contentful", "vuetify", "vue-flex", "vuex-scroll"],
@@ -52,7 +56,7 @@ module.exports = {
     "~/plugins/vuex-scroll",
     "~/plugins/vuex-pageScroll"
   ],
-  modules: ["@nuxtjs/font-awesome"],
+  modules: ["@nuxtjs/font-awesome", "@nuxtjs/icon", "@nuxtjs/manifest"],
   env: {
     CTF_SPACE_ID: config.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
