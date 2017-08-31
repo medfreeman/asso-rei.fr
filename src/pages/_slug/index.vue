@@ -3,28 +3,16 @@
     <header>
       <h1>{{ page.title }}</h1>
     </header>
-    <vue-markdown>{{ page.body }}</vue-markdown>
+    <nuxtent-body-fix :body="page.body" />
   </article>
 </template>
 
 <script>
-import VueMarkdown from "vue-markdown";
-
-import {createClient} from "~/plugins/contentful";
-const client = createClient();
-
 export default {
-  components: {
-    VueMarkdown
-  },
-  async asyncData({ env, params, error }) {
+  async asyncData ({ app, route, payload, error }) {
     try {
-      const { items } = await client.getEntries({
-        "content_type": env.CTF_PAGE_TYPE_ID,
-        "fields.slug": params.slug
-      });
       return {
-        page: items[0].fields
+        page: payload || await app.$content('/pages/').get(route.path)
       }
     } catch(e) {
       error({ statusCode: 404, message: "Page not found" });

@@ -1,7 +1,6 @@
 var StyleLintPlugin = require("stylelint-webpack-plugin");
 
 var pkg = require("./package.json");
-const config = require("./.contentful.json");
 
 module.exports = {
   srcDir: "src/",
@@ -20,7 +19,7 @@ module.exports = {
   },
   build: {
     extractCSS: true,
-    vendor: ["contentful", "vuetify", "vue-flex", "vuex-scroll"],
+    vendor: ["vuetify", "vue-flex", "vuex-scroll"],
     extend(config, { isClient }) {
       if (isClient) {
         config.module.rules.push({
@@ -43,23 +42,17 @@ module.exports = {
   },
   css: ["~/assets/style/app.styl", "vue-flex/dist/vue-flex.css"],
   plugins: [
-    "~/plugins/contentful",
+    "~/plugins/nuxtent-body-fix",
     "~/plugins/vuetify",
     "~/plugins/flex",
     "~/plugins/vuex-scroll",
     "~/plugins/vuex-pageScroll"
   ],
   modules: [
+    "nuxtent",
     "@nuxtjs/font-awesome",
     "@nuxtjs/meta",
     "@nuxtjs/manifest",
     "@nuxtjs/icon"
-  ],
-  env: {
-    CTF_SPACE_ID: config.CTF_SPACE_ID,
-    CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
-    CTF_PERSON_ID: config.CTF_PERSON_ID,
-    CTF_PAGE_TYPE_ID: config.CTF_PAGE_TYPE_ID,
-    CTF_MENU_TYPE_ID: config.CTF_MENU_TYPE_ID
-  }
+  ]
 };

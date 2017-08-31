@@ -1,0 +1,6 @@
+# Temporary fix
+# Remove this file and folder when
+# https://github.com/nuxt-community/nuxtent-module/issues/55 is closed
+*
+# Except this file
+!.gitignore
