@@ -6,13 +6,7 @@ const config = require("./.contentful.json");
 module.exports = {
   srcDir: "src/",
   head: {
-    title: pkg.name,
     titleTemplate: `%s | ${pkg.name}`,
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: pkg.description }
-    ],
     link: [
       {
         rel: "stylesheet",
@@ -22,7 +16,6 @@ module.exports = {
     ]
   },
   manifest: {
-    name: pkg.name,
     lang: "fr"
   },
   build: {
@@ -56,7 +49,12 @@ module.exports = {
     "~/plugins/vuex-scroll",
     "~/plugins/vuex-pageScroll"
   ],
-  modules: ["@nuxtjs/font-awesome", "@nuxtjs/icon", "@nuxtjs/manifest"],
+  modules: [
+    "@nuxtjs/font-awesome",
+    "@nuxtjs/meta",
+    "@nuxtjs/manifest",
+    "@nuxtjs/icon"
+  ],
   env: {
     CTF_SPACE_ID: config.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
