@@ -2,7 +2,7 @@
   <v-toolbar dark fixed :style="{opacity: toolbarOpacity}" :class="$style.toolbar">
     <flex3c-center>
       <navigation slot="left"/>
-      <logo :logoClass="$style.logo"/>
+      <nuxt-link to="/" :class="$style.link"><logo :logoClass="$style.logo"/></nuxt-link>
     </flex3c-center>
   </v-toolbar>
 </template>
@@ -10,6 +10,13 @@
 <style module>
   .toolbar {
     transition: opacity 0.2s ease-out;
+  }
+
+  .link {
+    height: inherit;
+    display: flex;
+    flex: 1;
+    align-items: center;
   }
 
   .logo {
