@@ -1,4 +1,5 @@
 var StyleLintPlugin = require("stylelint-webpack-plugin");
+var netlifyCmsModule = require("nuxt-netlify-cms").default;
 
 var pkg = require("./package.json");
 
@@ -49,6 +50,7 @@ module.exports = {
     "~/plugins/vuex-pageScroll"
   ],
   modules: [
+    netlifyCmsModule,
     "nuxtent",
     "@nuxtjs/font-awesome",
     "@nuxtjs/meta",
