@@ -1,7 +1,5 @@
 ---
 categories:
-  - test
-  - dgfdhd
   - ''
 title: Menu principal
 location: test
@@ -11,5 +9,6 @@ items:
     page: Accueil
   - page: Activités
 ---
+
 
 
