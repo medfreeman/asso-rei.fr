@@ -45,6 +45,7 @@
     "stylelint-webpack-plugin": "^0.9.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
+    "uuid": "^3.1.0",
     "vue-flex": "^1.0.9",
     "vuetify": "^0.15.2",
     "vuex-scroll": "^0.0.5"
