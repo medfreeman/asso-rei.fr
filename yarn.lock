@@ -2591,7 +2591,7 @@ error-stack-parser@^2.0.0:
   dependencies:
     stackframe "^1.0.3"
 
-es-abstract@^1.4.3, es-abstract@^1.5.0, es-abstract@^1.5.1, es-abstract@^1.6.1, es-abstract@^1.7.0:
+es-abstract@^1.4.3, es-abstract@^1.5.0, es-abstract@^1.5.1, es-abstract@^1.6.1, es-abstract@^1.7.0, es-abstract@^1.8.2:
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.8.2.tgz#25103263dc4decbda60e0c737ca32313518027ee"
   dependencies:
@@ -4752,10 +4752,6 @@ lodash.merge@^4.4.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.0.tgz#69884ba144ac33fe699737a6086deffadd0f89c5"
 
-lodash.omit@^4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/lodash.omit/-/lodash.omit-4.5.0.tgz#6eb19ae5a1ee1dd9df0b969e66ce0b7fa30b5e60"
-
 lodash.pick@^4.2.1:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/lodash.pick/-/lodash.pick-4.4.0.tgz#52f05610fff9ded422611441ed1fc123a03001b3"
@@ -5269,8 +5265,8 @@ netlify-cms@^0.5.0-beta.10:
     fsevents "^1.0.14"
 
 no-case@^2.2.0:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/no-case/-/no-case-2.3.1.tgz#7aeba1c73a52184265554b7dc03baf720df80081"
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/no-case/-/no-case-2.3.2.tgz#60b813396be39b3f1288a4c1ed5d1e7d28b464ac"
   dependencies:
     lower-case "^1.1.1"
 
@@ -5686,12 +5682,11 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt-netlify-cms@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/nuxt-netlify-cms/-/nuxt-netlify-cms-1.1.0.tgz#6971d5c5e13f1cbdb20cc0f58e861d1ec5ddb99e"
+nuxt-netlify-cms@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/nuxt-netlify-cms/-/nuxt-netlify-cms-1.2.0.tgz#9c828ac8ef7973bb3e3a9d21fac84b227e4c197d"
   dependencies:
     js-yaml "^3.9.1"
-    lodash.omit "^4.5.0"
     needlepoint "^1.0.5"
     style-loader "^0.18.2"
 
@@ -6140,8 +6135,8 @@ pbkdf2-compat@2.0.1:
   resolved "https://registry.yarnpkg.com/pbkdf2-compat/-/pbkdf2-compat-2.0.1.tgz#b6e0c8fa99494d94e0511575802a59a5c142f288"
 
 pbkdf2@^3.0.3:
-  version "3.0.13"
-  resolved "https://registry.yarnpkg.com/pbkdf2/-/pbkdf2-3.0.13.tgz#c37d295531e786b1da3e3eadc840426accb0ae25"
+  version "3.0.14"
+  resolved "https://registry.yarnpkg.com/pbkdf2/-/pbkdf2-3.0.14.tgz#a35e13c64799b06ce15320f459c230e68e73bade"
   dependencies:
     create-hash "^1.1.2"
     create-hmac "^1.1.4"
@@ -6805,8 +6800,8 @@ pretty-format@^20.0.3:
     ansi-styles "^3.0.0"
 
 prismjs@^1.5.1:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.6.0.tgz#118d95fb7a66dba2272e343b345f5236659db365"
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.7.0.tgz#6c03898d388762f460cb06d2773c7f4e6d2cd614"
   optionalDependencies:
     clipboard "^1.5.5"
 
@@ -6843,12 +6838,12 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.0.tgz#8a1be366bf8fc23db2bd23f10c6fe920b4389d1f"
 
 promise.prototype.finally@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/promise.prototype.finally/-/promise.prototype.finally-3.0.0.tgz#afb1710ff2068562966f6d006d12c3107c7a4f39"
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/promise.prototype.finally/-/promise.prototype.finally-3.0.1.tgz#51ba2fa0a4cba5cbca54da818a8da8f24fc68f39"
   dependencies:
     define-properties "^1.1.2"
-    es-abstract "^1.7.0"
-    function-bind "^1.1.0"
+    es-abstract "^1.8.2"
+    function-bind "^1.1.1"
 
 promise@^7.1.1:
   version "7.3.1"
@@ -7016,9 +7011,13 @@ q@^1.1.2:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.0.tgz#dd01bac9d06d30e6f219aecb8253ee9ebdc308f1"
 
-qs@6.5.0, qs@^6.1.0, qs@^6.2.0:
+qs@6.5.0:
   version "6.5.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.0.tgz#8d04954d364def3efc55b5a0793e1e2c8b1e6e49"
+
+qs@^6.1.0, qs@^6.2.0:
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
 
 qs@~6.2.0:
   version "6.2.3"
