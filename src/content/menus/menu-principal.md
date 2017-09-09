@@ -1,4 +1,6 @@
 ---
+categories:
+  - ''
 title: Menu principal
 location: test
 items:
@@ -7,4 +9,6 @@ items:
     page: Accueil
   - page: Activités
 ---
+
+
 
