@@ -1,6 +1,5 @@
 ---
 title: Menu principal
-location: test
 items:
   - items:
       - {}
