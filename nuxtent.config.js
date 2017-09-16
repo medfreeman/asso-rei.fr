@@ -8,6 +8,13 @@ module.exports = {
         isPost: false,
         generate: ["getAll"]
       }
+    ],
+    [
+      "menus",
+      {
+        page: "/menus/_slug",
+        isPost: false
+      }
     ]
   ]
 };

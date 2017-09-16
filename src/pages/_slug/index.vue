@@ -9,10 +9,10 @@
 
 <script>
 export default {
-  async asyncData ({ app, route, payload, error }) {
+  asyncData ({ store, route, error }) {
     try {
       return {
-        page: payload || await app.$content('/pages/').get(route.path)
+        page: store.state.pages.bySlug[route.path]
       }
     } catch(e) {
       error({ statusCode: 404, message: "Page not found" });

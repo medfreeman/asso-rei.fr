@@ -12,10 +12,10 @@ import pkg from "~~/package.json";
 
 export default {
   layout: "landing",
-  async asyncData ({ app, payload, error }) {
+  asyncData ({ store, error }) {
     try {
       return {
-        page: payload || await app.$content('/pages/').get("index")
+        page: store.state.pages.bySlug["/index"]
       }
     } catch(e) {
       error({ statusCode: 404, message: "Page not found" });
