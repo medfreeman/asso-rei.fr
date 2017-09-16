@@ -6,7 +6,7 @@ module.exports = {
         page: "/pages/_slug",
         permalink: ":slug",
         isPost: false,
-        generate: ["get", "getAll"]
+        generate: ["getAll"]
       }
     ]
   ]
