@@ -8,19 +8,12 @@
 </template>
 
 <script>
+import pageMixin from "~/components/mixins/page";
 import pkg from "~~/package.json";
 
 export default {
   layout: "landing",
-  asyncData ({ store, error }) {
-    try {
-      return {
-        page: store.state.pages.bySlug["/index"]
-      }
-    } catch(e) {
-      error({ statusCode: 404, message: "Page not found" });
-    }
-  },
+  mixins: [pageMixin],
   head () {
     return {
       title: pkg.name,

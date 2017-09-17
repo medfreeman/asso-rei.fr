@@ -8,16 +8,10 @@
 </template>
 
 <script>
+import pageMixin from "~/components/mixins/page";
+
 export default {
-  asyncData ({ store, route, error }) {
-    try {
-      return {
-        page: store.state.pages.bySlug[route.path]
-      }
-    } catch(e) {
-      error({ statusCode: 404, message: "Page not found" });
-    }
-  },
+  mixins: [pageMixin],
   head () {
     return {
       title: this.page.title,
