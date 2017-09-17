@@ -5,15 +5,12 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import menuMixin from "~/components/mixins/menu";
 
 const primaryMenuId = "780acbda-c404-4739-b806-eedc6236e2d4";
+const menu = menuMixin(primaryMenuId);
 
 export default {
-  computed: {
-    ...mapState({
-      menu: state => (state.menus.byId[primaryMenuId] || {items: []})
-    })
-  }
+  mixins: [menu]
 }
 </script>
