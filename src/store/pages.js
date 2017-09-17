@@ -21,7 +21,11 @@ export const actions = {
         .getAll();
 
       pages.forEach(page => {
-        commit("set", page);
+        const pageData = {
+          ...page,
+          permalink: page.permalink !== "/index" ? page.permalink : "/"
+        };
+        commit("set", pageData);
       });
     } catch (e) {
       console.log("error fetching pages");

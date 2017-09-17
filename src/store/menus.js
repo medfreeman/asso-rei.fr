@@ -26,7 +26,7 @@ export const actions = {
           const page = pages[item.page];
           items.push({
             title: page.title,
-            slug: page.permalink !== "/index" ? page.permalink : "/"
+            slug: page.permalink
           });
         });
         commit("set", {
