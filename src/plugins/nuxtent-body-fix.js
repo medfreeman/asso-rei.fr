@@ -23,8 +23,7 @@ Vue.component("nuxtent-body-fix", {
   },
   props: {
     body: {
-      type: [Object, String],
-      required: true
+      type: [Object, String]
     }
   }
 });
