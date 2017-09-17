@@ -64,7 +64,6 @@ collections:
     editor:
       preview: false
     folder: "content/menus"
-    create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - label: "Items"
