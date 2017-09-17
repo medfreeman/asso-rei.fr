@@ -1,7 +1,4 @@
 /* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
-
-import { mapState } from "vuex";
 
 export const state = () => ({
   byId: {}
