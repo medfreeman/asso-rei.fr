@@ -39,11 +39,15 @@ collections:
       - { label: "UUID", name: "uuid", widget: "uuid" }
 
   - name: "settings"
-    label: "Site settings"
+    label: "Settings"
     editor:
       preview: false
-    folder: "content/_settings"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Subtitle", name: "subtitle", widget: "string" }
-      - { label: "Footer text", name: "footer_content", widget: "text" }
+    files:
+      - name: "general"
+        label: "Site Settings"
+        file: "content/_data/settings.json"
+        description: "General Site Settings"
+        fields:
+          - { label: "Title", name: "site_title", widget: "string" }
+          - { label: "Subtitle", name: "site_subtitle", widget: "string" }
+          - { label: "Footer text", name: "footer_content", widget: "text" }
