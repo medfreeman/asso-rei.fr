@@ -15,6 +15,13 @@ module.exports = {
         page: "/menus/_slug",
         isPost: false
       }
+    ],
+    [
+      "data",
+      {
+        page: "/data/_slug",
+        isPost: false
+      }
     ]
   ]
 };
