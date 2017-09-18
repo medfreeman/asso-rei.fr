@@ -27,38 +27,6 @@ collections:
       - {label: "Question", name: "title", widget: "string", tagname: "h1"}
       - {label: "Answer", name: "body", widget: "markdown"}
 
-  - name: "settings"
-    label: "Settings"
-    editor:
-      preview: false
-    folder: "content/_settings"
-    create: true
-    fields:
-      - name: "general"
-        label: "Site Settings"
-        file: "_data/settings.json"
-        description: "General Site Settings"
-        widget: "object"
-        fields:
-          - {label: "Global title", name: "site_title", widget: "string"}
-          - label: "Post Settings"
-            name: posts
-            widget: "object"
-            fields:
-              - {label: "Number of posts on frontpage", name: front_limit, widget: number}
-              - {label: "Default Author", name: author, widget: string}
-              - {label: "Default Thumbnail", name: thumb, widget: image, class: "thumb"}
-
-      - name: "authors"
-        label: "Authors"
-        file: "_data/authors.yml"
-        description: "Author descriptions"
-        create: true
-        widget: "list"
-        fields:
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Description", name: "description", widget: "markdown" }
-
   - name: "menus"
     label: "Menu"
     editor:
@@ -77,6 +45,17 @@ collections:
             fields:
               - { label: "Page", name: "page", widget: "relation", collection: "pages", searchFields: ["title", "body"], valueField: "title" }
       - { label: "UUID", name: "uuid", widget: "uuid" }
+
+  - name: "settings"
+    label: "Site settings"
+    editor:
+      preview: false
+    folder: "content/_settings"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Footer text", name: "footer_content", widget: "text" }
+
 
   - name: "kitchenSink" # all the things in one entry, for documentation and quick testing
     label: "Kitchen Sink"
