@@ -11,7 +11,7 @@ collections:
     folder: "content/pages"
     slug: "{{slug}}"
     create: true
-    fields: # The fields each document in this collection have
+    fields:
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
       - {label: "Description", name: "description", widget: "string", tagname: "h2"}
       - {label: "Body", name: "body", widget: "markdown"}
