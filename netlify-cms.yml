@@ -45,7 +45,7 @@ collections:
     files:
       - name: "general"
         label: "Site Settings"
-        file: "content/_data/settings.yml"
+        file: "content/data/settings.yaml"
         description: "General Site Settings"
         fields:
           - { label: "Title", name: "site_title", widget: "string" }
