@@ -1,18 +1,53 @@
 backend:
   name: github
   repo: medfreeman/asso-rei.fr
-  branch: netlify-cms
+  branch: netlify-content-testing
 
 media_folder: "static/uploads"
 
 collections:
   - name: "pages"
-    label: "Page"
+    label: "Pages"
     folder: "content/pages"
     slug: "{{slug}}"
     create: true
-    fields: # The fields each document in this collection have
+    fields:
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Description", name: "description", widget: "string", tagname: "h2"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "UUID", name: "uuid", widget: "uuid"}
     meta:
       - {label: "SEO Description", name: "description", widget: "text"}
+
+  - name: "menus"
+    label: "Menus"
+    editor:
+      preview: false
+    folder: "content/menus"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Items"
+        name: "items"
+        widget: "list"
+        fields:
+          - { label: "Page", name: "page", widget: "relation", collection: "pages", searchFields: ["title", "body"], valueField: "title" }
+          - label: "Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Page", name: "page", widget: "relation", collection: "pages", searchFields: ["title", "body"], valueField: "title" }
+      - { label: "UUID", name: "uuid", widget: "uuid" }
+
+  - name: "settings"
+    label: "Settings"
+    editor:
+      preview: false
+    files:
+      - name: "general"
+        label: "Site Settings"
+        file: "content/data/settings.yaml"
+        description: "General Site Settings"
+        fields:
+          - { label: "Title", name: "site_title", widget: "string" }
+          - { label: "Subtitle", name: "site_subtitle", widget: "string" }
+          - { label: "Footer text", name: "footer_content", widget: "text" }

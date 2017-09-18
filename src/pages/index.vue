@@ -8,23 +8,16 @@
 </template>
 
 <script>
-import pkg from "~~/package.json";
+import pageMixin from "~/components/mixins/page";
+import settingsMixin from "~/components/mixins/settings";
 
 export default {
   layout: "landing",
-  async asyncData ({ app, payload, error }) {
-    try {
-      return {
-        page: payload || await app.$content('/pages/').get("index")
-      }
-    } catch(e) {
-      error({ statusCode: 404, message: "Page not found" });
-    }
-  },
+  mixins: [pageMixin, settingsMixin],
   head () {
     return {
-      title: pkg.name,
-      titleTemplate: `%s | ${pkg.description}`,
+      title: this.settings.site_title,
+      titleTemplate: `%s | ${this.settings.site_subtitle}`,
       meta: [
         { hid: "description", name: "description", content: this.page.description }
       ]

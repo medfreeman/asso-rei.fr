@@ -6,7 +6,21 @@ module.exports = {
         page: "/pages/_slug",
         permalink: ":slug",
         isPost: false,
-        generate: ["get", "getAll"]
+        generate: ["getAll"]
+      }
+    ],
+    [
+      "menus",
+      {
+        page: "/menus/_slug",
+        isPost: false
+      }
+    ],
+    [
+      "data",
+      {
+        page: "/data/_slug",
+        isPost: false
       }
     ]
   ]
