@@ -6,7 +6,6 @@ var pkg = require("./package.json");
 module.exports = {
   srcDir: "src/",
   head: {
-    titleTemplate: `%s | ${pkg.name}`,
     link: [
       {
         rel: "stylesheet",

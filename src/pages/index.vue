@@ -9,15 +9,15 @@
 
 <script>
 import pageMixin from "~/components/mixins/page";
-import pkg from "~~/package.json";
+import settingsMixin from "~/components/mixins/settings";
 
 export default {
   layout: "landing",
-  mixins: [pageMixin],
+  mixins: [pageMixin, settingsMixin],
   head () {
     return {
-      title: pkg.name,
-      titleTemplate: `%s | ${pkg.description}`,
+      title: this.settings.site_title,
+      titleTemplate: `%s | ${this.settings.site_subtitle}`,
       meta: [
         { hid: "description", name: "description", content: this.page.description }
       ]
