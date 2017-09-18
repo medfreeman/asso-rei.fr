@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: medfreeman/asso-rei.fr
-  branch: netlify-content-testing
+  branch: netlify-cms
 
 media_folder: "static/uploads"
 
