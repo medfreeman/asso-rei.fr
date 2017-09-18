@@ -19,7 +19,7 @@ module.exports = {
   },
   build: {
     extractCSS: true,
-    vendor: ["vuetify", "vue-flex", "vuex-scroll"],
+    vendor: ["vuetify", "vue-flex/dist/vue-flex.common.js", "vuex-scroll"],
     extend(config, { isClient }) {
       if (isClient) {
         config.module.rules.push({

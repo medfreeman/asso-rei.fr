@@ -1,4 +1,4 @@
 import Vue from "vue";
-import VueFlex from "vue-flex/dist/vue-flex.common.js"; // imports the ESM module by default
+import VueFlex from "vue-flex/dist/vue-flex.common.js";
 
 Vue.use(VueFlex);
