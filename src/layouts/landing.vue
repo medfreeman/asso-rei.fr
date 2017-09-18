@@ -28,6 +28,9 @@ import logo from "~/components/logo.vue";
 
 export default {
   components: {layout, fullpage, logo},
+  beforeMount() {
+    window.scrollTo(window.scrollX, window.scrollY-1);
+  },
   data () {
     return {
       logoPadding: 0
