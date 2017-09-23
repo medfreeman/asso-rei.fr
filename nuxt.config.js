@@ -41,7 +41,6 @@ module.exports = {
   },
   css: ["~/assets/style/app.styl", "vue-flex/dist/vue-flex.css"],
   plugins: [
-    "~/plugins/nuxtent-body-fix",
     "~/plugins/vuetify",
     "~/plugins/flex",
     "~/plugins/vuex-scroll",

@@ -3,7 +3,7 @@
     <header>
       <h1>{{ page.title }}</h1>
     </header>
-    <nuxtent-body-fix :body="page.body" />
+    <nuxtent-body :body="page.body" />
   </article>
 </template>
 

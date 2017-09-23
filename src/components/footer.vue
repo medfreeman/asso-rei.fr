@@ -1,7 +1,7 @@
 <template>
   <v-footer>
     <v-spacer/>
-    <nuxtent-body-fix :body="settings.footer_content" />
+    <nuxtent-body :body="settings.footer_content" />
     <v-spacer/>
   </v-footer>
 </template>
