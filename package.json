@@ -16,7 +16,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxtent generate"
+    "generate": "nuxt generate"
   },
   "devDependencies": {
     "@nuxtjs/axios": "^4.3.0",
@@ -35,7 +35,7 @@
     "npm-run-all": "^4.1.1",
     "nuxt": "^1.0.0-rc11",
     "nuxt-netlify-cms": "^2.0.1",
-    "nuxtent": "^0.2.78",
+    "nuxtent": "^1.0.0",
     "postcss-cssnext": "^3.0.2",
     "postcss-reporter": "^5.0.0",
     "prettier": "^1.7.0",
