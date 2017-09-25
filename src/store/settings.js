@@ -14,7 +14,7 @@ export const actions = {
   async get({ commit }) {
     try {
       const settings = await this.app
-        .$content("/data/")
+        .$content("/data")
         .query({ exclude: "meta" })
         .get("/settings");
 

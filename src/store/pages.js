@@ -16,7 +16,7 @@ export const actions = {
   async getAll({ commit }) {
     try {
       const pages = await this.app
-        .$content("/pages/")
+        .$content("/pages")
         .query({ exclude: "meta" })
         .getAll();
 

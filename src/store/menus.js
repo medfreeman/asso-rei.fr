@@ -14,7 +14,7 @@ export const actions = {
   async getAll({ commit }) {
     try {
       const menus = await this.app
-        .$content("/menus/")
+        .$content("/menus")
         .query({ exclude: "meta" })
         .getAll();
 
