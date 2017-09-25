@@ -4,9 +4,9 @@ module.exports = {
       "pages",
       {
         page: "/pages/_slug",
-        permalink: ":slug",
+        permalink: "/:slug",
         isPost: false,
-        generate: ["getAll"]
+        generate: ["get", "getAll"]
       }
     ],
     [
