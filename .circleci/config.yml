@@ -1,9 +1,9 @@
 version: 2
 jobs:
   build:
-    working_directory: /usr/src/app
     docker:
-      - image: banian/node
+      - image: node:8
+    working_directory: /usr/src/app
     steps:
       # Checkout repository
       - checkout
@@ -12,15 +12,19 @@ jobs:
       - restore_cache:
           key: yarn-{{ checksum "yarn.lock" }}
 
+      # Disable yarn progress bar for perf
+      - run:
+          command: yarn config set no-progress
+
       # Greenkeeper-lockfile
       - run:
-          name: Install Greenkeeper-lockfile
+          name: Installing Greenkeeper-lockfile
           command: yarn global add greenkeeper-lockfile@1
 
       # Install dependencies
       - run:
-          name: Install Dependencies
-          command: NODE_ENV=dev yarn
+          name: Installing Dependencies
+          command: yarn
 
       # Keep cache
       - save_cache:
@@ -30,7 +34,7 @@ jobs:
 
       # Update yarn.lock
       - run:
-          name: Update lockfile
+          name: Updating lockfile
           command: greenkeeper-lockfile-update
 
       # Test
@@ -38,7 +42,18 @@ jobs:
           name: Tests
           command: yarn test
 
+      # Build
+      - run:
+          name: Building nuxt site
+          command: yarn generate
+
       # Upload yarn.lock
       - run:
-          name: Upload lockfile
+          name: Uploading lockfile
           command: greenkeeper-lockfile-upload
+
+      - persist_to_workspace:
+          root: /usr/src/app
+          paths:
+            - dist/*
+            - .circleci/*
