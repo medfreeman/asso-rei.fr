@@ -11,6 +11,10 @@
 </template>
 
 <style module>
+  .topPadding {
+    padding-top: 80px;
+  }
+
   .noTopPadding {
     padding-top: 0 !important;
   }
@@ -30,7 +34,7 @@ export default {
   },
   methods: {
     mainClass() {
-      return !this.animated ? "" : this.$style.noTopPadding;
+      return !this.animated ? this.$style.topPadding : this.$style.noTopPadding;
     }
   }
 }
