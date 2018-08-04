@@ -4,6 +4,6 @@ footer_content: >-
   <span>Made with <i class="fa fa-heart"></i> using <a
   href="https://nuxtjs.org/" class="secondary" rel="noreferrer noopener"
   target="_blank">nuxt.js</a>, <a href="https://vuejs.org/" class="secondary"
-  rel="noreferrer noopener" target="_blank">vue.js</a> & <a
+  rel="noreferrer noopener" target="_blank">vue.js</a> &amp; <a
   href="https://www.netlifycms.org/" class="secondary" rel="noreferrer noopener"
   target="_blank">netlify-cms</a></span>

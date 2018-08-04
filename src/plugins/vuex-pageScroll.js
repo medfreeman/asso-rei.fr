@@ -9,7 +9,7 @@ const pageScrollMixin = {
   },
   watch: {
     progress: function(progress) {
-      const scrollProgress = Math.min(progress / document.body.clientHeight, 1);
+      const scrollProgress = Math.min(progress / window.innerHeight, 1);
       this.$store.commit("pageScroll/update", scrollProgress);
     }
   }
