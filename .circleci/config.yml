@@ -1,0 +1,44 @@
+version: 2
+jobs:
+  build:
+    working_directory: /usr/src/app
+    docker:
+      - image: banian/node
+    steps:
+      # Checkout repository
+      - checkout
+
+      # Restore cache
+      - restore_cache:
+          key: yarn-{{ checksum "yarn.lock" }}
+
+      # Greenkeeper-lockfile
+      - run:
+          name: Install Greenkeeper-lockfile
+          command: yarn global add greenkeeper-lockfile@1
+
+      # Install dependencies
+      - run:
+          name: Install Dependencies
+          command: NODE_ENV=dev yarn
+
+      # Keep cache
+      - save_cache:
+          key: yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - "node_modules"
+
+      # Update yarn.lock
+      - run:
+          name: Update lockfile
+          command: greenkeeper-lockfile-update
+
+      # Test
+      - run:
+          name: Tests
+          command: yarn test
+
+      # Upload yarn.lock
+      - run:
+          name: Upload lockfile
+          command: greenkeeper-lockfile-upload
