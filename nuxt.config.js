@@ -43,6 +43,7 @@ module.exports = {
   plugins: [
     "~/plugins/vuetify",
     "~/plugins/flex",
+    "~/plugins/vue-scrollTo",
     "~/plugins/vuex-scroll",
     "~/plugins/vuex-pageScroll"
   ],
