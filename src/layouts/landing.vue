@@ -1,9 +1,11 @@
 <template>
   <layout animated>
-    <fullpage :class="$style.container" :style="{ paddingTop: logoPadding }">
-      <v-spacer></v-spacer>
-      <logo :logoClass="$style.logo"/>
-      <v-spacer></v-spacer>
+    <fullpage
+      :class="$style.container"
+      :style="{ paddingTop: logoPadding }">
+      <v-spacer/>
+      <logo :logo-class="$style.logo"/>
+      <v-spacer/>
     </fullpage>
     <nuxt/>
   </layout>
@@ -28,11 +30,6 @@ import logo from "~/components/logo.vue";
 
 export default {
   components: {layout, fullpage, logo},
-  mounted: function () {
-    this.$nextTick(function () {
-      this.$scrollTo("main");
-    })
-  },
   data () {
     return {
       logoPadding: 0
@@ -46,6 +43,11 @@ export default {
       const height = progress * 100;
       this.logoPadding = `${height}vh`;
     }
+  },
+  mounted: function () {
+    this.$nextTick(function () {
+      this.$scrollTo("main");
+    })
   }
 }
 </script>

@@ -1,18 +1,35 @@
 <template>
-  <flex justify="center" :class="$style.container">
-    <flex align="center" justify="center" :class="$style.box">
-      <flex align="center" tag="span">
-        <slot name="left"></slot>
+  <flex 
+    :class="$style.container" 
+    justify="center">
+    <flex 
+      :class="$style.box" 
+      align="center" 
+      justify="center">
+      <flex 
+        align="center" 
+        tag="span">
+        <slot name="left"/>
       </flex>
     </flex>
-    <flex align="center" justify="center" :class="$style.box">
-      <flex align="center" tag="span">
-        <slot></slot>
+    <flex 
+      :class="$style.box" 
+      align="center" 
+      justify="center">
+      <flex 
+        align="center" 
+        tag="span">
+        <slot/>
       </flex>
     </flex>
-    <flex align="center" justify="center" :class="$style.box">
-      <flex align="center" tag="span">
-        <slot name="right"></slot>
+    <flex 
+      :class="$style.box" 
+      align="center" 
+      justify="center">
+      <flex 
+        align="center" 
+        tag="span">
+        <slot name="right"/>
       </flex>
     </flex>
   </flex>

@@ -3,7 +3,7 @@
     <s-header :animated="animated"/>
     <main :class="mainClass()">
       <v-container fluid>
-        <slot></slot>
+        <slot/>
       </v-container>
     </main>
     <s-footer/>

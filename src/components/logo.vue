@@ -1,5 +1,7 @@
 <template>
-  <img src="~/assets/svg/logo.svg" :class="computedClass"/>
+  <img 
+    :class="computedClass" 
+    src="~/assets/svg/logo.svg">
 </template>
 
 <style module>

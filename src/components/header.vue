@@ -1,8 +1,14 @@
 <template>
-  <v-toolbar dark fixed :style="{opacity: toolbarOpacity}" :class="$style.toolbar">
+  <v-toolbar 
+    :style="{opacity: toolbarOpacity}" 
+    :class="$style.toolbar" 
+    dark 
+    fixed>
     <flex3c-center>
       <navigation slot="left"/>
-      <nuxt-link to="/" :class="$style.link"><logo :logoClass="$style.logo"/></nuxt-link>
+      <nuxt-link 
+        :class="$style.link" 
+        to="/"><logo :logo-class="$style.logo"/></nuxt-link>
     </flex3c-center>
   </v-toolbar>
 </template>

@@ -1,6 +1,9 @@
 <template>
-  <flex align="center" justify="center" :class="$style.container">
-    <slot></slot>
+  <flex 
+    :class="$style.container" 
+    align="center" 
+    justify="center">
+    <slot/>
   </flex>
 </template>
 

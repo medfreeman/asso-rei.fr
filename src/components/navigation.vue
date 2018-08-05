@@ -1,6 +1,13 @@
 <template>
   <v-toolbar-items>
-    <v-btn flat v-for="item in menu.items" :key="item.slug" :to="item.slug" router nuxt :exact="(item.slug === '/') ? true : false">{{ item.title }}</v-btn>
+    <v-btn 
+      v-for="item in menu.items" 
+      :key="item.slug" 
+      :to="item.slug" 
+      :exact="(item.slug === '/') ? true : false" 
+      flat 
+      router 
+      nuxt>{{ item.title }}</v-btn>
   </v-toolbar-items>
 </template>
 
