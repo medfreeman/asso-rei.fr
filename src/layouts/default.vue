@@ -8,8 +8,10 @@
 import layout from "~/components/layout.vue"
 export default {
   components: {layout},
-  beforeMount() {
-    window.scrollTo(window.scrollX, 0);
+  mounted: function () {
+    this.$nextTick(function () {
+      this.$scrollTo("main");
+    })
   },
 }
 </script>

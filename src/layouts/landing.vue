@@ -28,8 +28,10 @@ import logo from "~/components/logo.vue";
 
 export default {
   components: {layout, fullpage, logo},
-  beforeMount() {
-    window.scrollTo(window.scrollX, window.scrollY-1);
+  mounted: function () {
+    this.$nextTick(function () {
+      this.$scrollTo("main");
+    })
   },
   data () {
     return {
