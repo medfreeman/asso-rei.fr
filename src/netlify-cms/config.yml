@@ -5,6 +5,8 @@ backend:
 
 media_folder: "static/uploads"
 
+public_folder: "/uploads"
+
 collections:
   - name: "pages"
     label: "Pages"
