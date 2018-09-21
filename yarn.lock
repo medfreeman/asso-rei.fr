@@ -103,9 +103,9 @@
   dependencies:
     hash-sum "^1.0.2"
 
-"@nuxtjs/meta@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-2.2.1.tgz#ad7c8658ef0357cdef56856a9ff21d595102e089"
+"@nuxtjs/meta@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/meta/-/meta-2.6.0.tgz#cc8fd2a019fb3e2e1feaa78abefee3a6a6aed477"
 
 "@nuxtjs/proxy@^1.2.4":
   version "1.2.4"
