@@ -21,7 +21,7 @@
   "devDependencies": {
     "@nuxtjs/axios": "^5.3.1",
     "@nuxtjs/font-awesome": "^1.0.2",
-    "@nuxtjs/icon": "^2.1.0",
+    "@nuxtjs/icon": "^2.6.0",
     "@nuxtjs/manifest": "^2.1.0",
     "@nuxtjs/meta": "^2.2.1",
     "eslint": "^5.3.0",
