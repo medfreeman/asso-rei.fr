@@ -10693,9 +10693,9 @@ vue@^2.5.17:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
 
-vuetify@^1.1.9:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.1.9.tgz#3eb497cc89d318ee6865bbebd081f5830f83f8ba"
+vuetify@^1.2.8:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.2.8.tgz#83de9f679bf7662d2ebd247682941fcfff68a7b6"
 
 vuex-scroll@^0.0.5:
   version "0.0.5"
