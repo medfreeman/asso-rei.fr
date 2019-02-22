@@ -34,7 +34,7 @@
     "netlify-cms": "^2.0.8",
     "npm-run-all": "^4.1.1",
     "nuxt": "^1.4.2",
-    "nuxt-netlify-cms": "^3.1.0",
+    "nuxt-netlify-cms": "^4.0.0",
     "nuxtent": "^1.4.1",
     "postcss-cssnext": "^3.0.2",
     "postcss-reporter": "^6.0.0",
