@@ -48,7 +48,7 @@
     "uuid": "^3.1.0",
     "vue-flex": "^2.0.2",
     "vue-scrollto": "^2.11.0",
-    "vuetify": "^1.1.9",
+    "vuetify": "^1.5.7",
     "vuex-scroll": "^0.0.5"
   },
   "lint-staged": {
