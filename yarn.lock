@@ -83,9 +83,10 @@
     axios-retry "^3.0.2"
     consola "^1.1.4"
 
-"@nuxtjs/font-awesome@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/font-awesome/-/font-awesome-1.0.2.tgz#cf1740e04b36e94476ed5cba69aef14a773625a2"
+"@nuxtjs/font-awesome@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/font-awesome/-/font-awesome-1.0.4.tgz#ffd543970fbedb41859129b52050020c676bb7b4"
+  integrity sha512-1Y+gISu8VCoK4VQnmmNZIzOHvkpkWm5Jvwa84rIOba0B7pkPHh4jdpS9BII5YvQfxXFtXRoM9UHu8oq/4IteCw==
   dependencies:
     font-awesome "^4.7.0"
 
