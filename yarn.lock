@@ -10693,9 +10693,10 @@ vue@^2.5.17:
   version "2.5.17"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.17.tgz#0f8789ad718be68ca1872629832ed533589c6ada"
 
-vuetify@^1.1.9:
-  version "1.1.9"
-  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-1.1.9.tgz#3eb497cc89d318ee6865bbebd081f5830f83f8ba"
+vuetify@^2.2.24:
+  version "2.2.24"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-2.2.24.tgz#2bd560a9a04f418b3fc4d5d5faccb707daadb612"
+  integrity sha512-CHgKR+DqrH6dPlJnqO7JEHgs2a/dMEheS1bYPN9pC4NXJLfFZdt1LTO9nRa86kgcVowxR0LIZnL5bfLfPH8kMQ==
 
 vuex-scroll@^0.0.5:
   version "0.0.5"
